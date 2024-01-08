@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <div class="aaa">
+    <div class="header">
       <img src="./eisenhower-matrix.jpg">
       <a class="more-inf" 
         href="https://goal-life.com/page/method/matrix-eisenhower"
@@ -16,17 +16,17 @@
         Want more details?
       </a>
     </div>
-    <div class="centered-main-page-element">
-      <p id="topSectionForAddingElementToList">
+    <div class="main-page-container">
+      <p id="add-item-title">
         <label for="new-task">Add Item</label>
       </p>
-      <div class="task-row-wrapper">
-        <input id="new-task"class="task" type="text">
+      <div class="new-task-container">
+        <input id="new-task" class="task" type="text">
         <button>Add</button>
       </div>
       </p>
       <h3>Todo</h3>
-      <ul id="incompleteTasks">
+      <ul id="incompleted-tasks-container">
         <li>
           <input type="checkbox">
           <label class="task">Pay Bills</label>
@@ -47,7 +47,7 @@
         </li>
       </ul>
       <h3>Completed</h3>
-      <ul id="completed-tasks">
+      <ul id="completed-tasks-container">
         <li>
           <input type="checkbox" checked>
           <label class="task">See the Doctor</label>
