@@ -103,6 +103,7 @@ input,button{
   display: block;
   margin: 0 0 20px;
 }
+
 #new-task-input {
     display: block;
     width: 318px;
@@ -139,6 +140,10 @@ input,button{
 }
 
 .delete-btn-img {
+  width: 226px
+}
+
+.delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
