@@ -142,10 +142,6 @@ button {
 }
 
 .delete-btn-img {
-  width: 226px;
-}
-
-.delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
