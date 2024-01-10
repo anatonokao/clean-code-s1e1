@@ -32,24 +32,24 @@ var createNewTaskElement=function(taskString){
   var deleteButton=document.createElement("button");//delete button
   var deleteButtonImg=document.createElement("img");//delete button image
 
-  listItem.className='task';
+  listItem.className='page__task task';
 
   label.innerText=taskString;
-  label.className="task-label";
+  label.className="task__label";
 
   //Each elements, needs appending
   checkBox.type="checkbox";
-  checkBox.className="task-checkbox";
+  checkBox.className="task__checkbox";
   editInput.type="text";
-  editInput.className="task-input";
+  editInput.className="page__input task__input";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit-btn btn";
+  editButton.className="page__btn task__btn edit-save-btn";
 
-  deleteButton.className="delete-btn btn";
+  deleteButton.className="page__btn task__btn delete-btn btn";
   deleteButtonImg.src='./remove.svg';
   deleteButtonImg.alt='delete button';
-  deleteButtonImg.className='delete-btn-img';
+  deleteButtonImg.className='delete-btn__img';
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -87,10 +87,10 @@ var editTask=function(){
 
   var listItem=this.parentNode;
 
-  var editInput=listItem.querySelector("input[type=text]");
-  var label=listItem.querySelector("label");
-  var saveEditButton=listItem.querySelector(".edit-btn") || listItem.querySelector(".save-btn");
-  var containsClass=listItem.classList.contains("edit-mode");
+  var editInput=listItem.querySelector(".task__input");
+  var label=listItem.querySelector(".task__label");
+  var saveEditButton=listItem.querySelector(".edit-save-btn");
+  var containsClass=listItem.classList.contains("page__task_edit-mode");
   //If class of the parent is .editmode
   if(containsClass){
 
@@ -104,7 +104,7 @@ var editTask=function(){
   }
 
   //toggle .editmode on the parent.
-  listItem.classList.toggle("edit-mode");
+  listItem.classList.toggle("page__task_edit-mode");
 };
 
 
@@ -160,8 +160,8 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
-  var checkBox=taskListItem.querySelector(".task-checkbox");
-  var saveEditButton=taskListItem.querySelector(".edit-btn") || taskListItem.querySelector(".save-btn");
+  var checkBox=taskListItem.querySelector(".task__checkbox");
+  var saveEditButton=taskListItem.querySelector(".edit-save-btn");
   var deleteButton=taskListItem.querySelector(".delete-btn");
 
 
